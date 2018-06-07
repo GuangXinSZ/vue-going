@@ -92,7 +92,10 @@
 </script>
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
+<<<<<<< HEAD
 @import '~styles/mimix.styl'
+=======
+>>>>>>> 69a01071b3759ede819ebe9e5abdd4441db3a5cd
     .icons >>> .swiper-container
      padding-bottom: 50%
   .icons
@@ -127,5 +130,8 @@
       height: 0.44rem
       color: $color
       text-align: center
+<<<<<<< HEAD
       ellipsis()
+=======
+>>>>>>> 69a01071b3759ede819ebe9e5abdd4441db3a5cd
 </style>
