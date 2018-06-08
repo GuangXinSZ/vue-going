@@ -2,12 +2,17 @@
     <div class="header">
        <div class="header-left"><span class="iconfont">&#xe624;</span></div>
        <div class="header-input"><span class="iconfont">&#xe632;</span>{{address}}</div>
-       <div class="header-right">城市<span class="iconfont arrow-icon">&#xe64a;</span></div>
+       <router-link to="/city">
+       <div class="header-right">{{ this.city }}<span class="iconfont arrow-icon">&#xe64a;</span></div>
+       </router-link>
     </div>
 </template>
 <script>
     export default {
         name: 'HomeHeader',
+        props: {
+            city: String
+        },
         data: function(){
             return {
                 address: '请输入你想要去的/景点/城市'
@@ -45,6 +50,7 @@
         width: 1.24rem
         float: right
         text-align center
+        color: #fff
         .arrow-icon
          font-size: 0.24rem  
 </style>
