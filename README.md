@@ -13,9 +13,13 @@ yarn start
 
 >>yarn build
 
-项目已经初始化 reset.css(完成)
+#项目已经初始化 reset.css(完成)
 
-使用iconfont + stylus(完成)
+>使用iconfont + stylus(完成)
+
+###完成主页面
+
+![Image text](https://raw.githubusercontent.com/AnimationXin/JavaScript/master/%E4%BB%8E0%E5%BC%80%E5%A7%8B/images/1.png)<br />
 
 使用better-scroll
 
