@@ -2,15 +2,16 @@ travel
 
 > A Vue.js project
 
-Build Setup
+> git clone https://github.com/AnimationXin/Vue-Stylus.git
 
-git clone
-
-serve with hot reload at localhost:8080
+> cnpm install
+cd travel
 yarn start
+> serve with hot reload at localhost:8080
 
-build for production with minification
-yarn build
+>>build for production with minification
+
+>>yarn build
 
 项目已经初始化 reset.css(完成)
 
