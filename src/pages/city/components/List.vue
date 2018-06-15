@@ -5,21 +5,25 @@
            <div class="title border-topbottom">当前城市</div>
            <div class="button-list">
                <div class="button-wrapper">
-                   <div class="button">北京</div>
+                   <div class="button">{{ this.$store.state.city }}</div>
                </div> 
            </div>
        </div>
           <div class="area">
            <div class="title border-topbottom">热门城市</div>
             <div class="button-list">
-               <div class="button-wrapper" v-for="item of hotList" :key="item.id">
+               <div class="button-wrapper"
+                v-for="item of hotList" 
+                :key="item.id"
+                @click="handleCityClick(item.name)"
+                >
                    <div class="button">{{ item.name }}</div>
                </div> 
            </div>
        </div>
         <div class="area" v-for="(item,index) of cityList" :key="index" :ref="index">
            <div class="title border-topbottom">{{index}}</div>
-           <div class="item-list" v-for="cyList of item" :key="cyList.id">
+           <div class="item-list" v-for="cyList of item" :key="cyList.id"  @click="handleCityClick(cyList.name)">
                <div class="item border-bottom">{{cyList.name}}</div>
            </div>
        </div> 
@@ -39,6 +43,12 @@ import Bscroll from 'better-scroll'
         mounted(){
             //使用betterScroll库 
             this.scroll = new Bscroll(this.$refs.wrapper)
+        },
+        methods: {
+            handleCityClick: function(city){
+                this.$store.dispatch('changeCity',city)
+                this.$router.push('/')
+            }
         },
         watch: {
             letter () {

@@ -38,6 +38,7 @@ export default {
 .wrapper
     width: 100%
     height: 0
+    margin-top: 0.8rem
     overflow: hidden
     padding-bottom: 28.8%
     background: #eee

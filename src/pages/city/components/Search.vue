@@ -5,7 +5,7 @@
     </div>
     <div class="search-result" v-show="keyword">
       <ul>
-        <li class="search-item" v-for="(item,index) in list" :key="index">{{item.name}}</li>
+        <li class="search-item" v-for="(item,index) in list" :key="index" @click="handleCityClick(item.name)">{{item.name}}</li>
       </ul>
       <div v-show="!list.length">
         暂无数据
@@ -29,6 +29,12 @@
         },
         mounted(){
          
+        },
+        methods: {
+          handleCityClick(city){
+            this.$store.dispatch('changeCity',city)
+            this.$router.push('/')
+          }
         },
         watch: {
           keyword(){
